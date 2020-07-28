@@ -1,0 +1,23 @@
+{
+  "name": "next-sitemap-gen",
+  "version": "0.0.1",
+  "description": "Sitemap generator for Next.js projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awareness481/next-sitemap-gen.git"
+  },
+  "keywords": [
+    "next.js",
+    "react.js"
+  ],
+  "author": "awareness481",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awareness481/next-sitemap-gen/issues"
+  },
+  "homepage": "https://github.com/awareness481/next-sitemap-gen#readme"
+}
