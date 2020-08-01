@@ -4,8 +4,19 @@ const fs = require('fs');
 const appDir = path.dirname(require.main.path[0]);
 const buildDir = path.dirname(appDir + '/.next/server/pages/.');
 
+let results = [];
+
 function hasBuildFolder() {
   return fs.existsSync(buildDir);
+}
+
+function createFile(results) {
+  const writeStream = fs.createWriteStream("sitemap.txt");
+  results.map((r) => {
+    writeStream.write(r + "\n");
+  })
+  writeStream.end();
+  console.log('file created!');
 }
 
 function main(buildDir) {
@@ -17,7 +28,6 @@ function main(buildDir) {
     console.log('No build folder found. Make sure you have built your project');
     return;
   }
-  let results = [];
   const files = fs.readdirSync(buildDir);
   for (let i = 0; i < files.length; i++) {
     const filename = path.join(buildDir, files[i]);
@@ -33,7 +43,10 @@ function main(buildDir) {
   }
   
   console.log(results)
-  return results;
 }
 
-main(buildDir);
+function start() {
+  main(buildDir);
+  createFile(results);
+}
+start();
