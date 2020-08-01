@@ -8,7 +8,7 @@ function hasBuildFolder() {
   return fs.existsSync(buildDir);
 }
 
-function main() {
+function main(buildDir) {
   if (hasBuildFolder()) {
     console.log('Build folder found!')
   } else if (!hasBuildFolder()) {
@@ -21,11 +21,19 @@ function main() {
   const files = fs.readdirSync(buildDir);
   for (let i = 0; i < files.length; i++) {
     const filename = path.join(buildDir, files[i]);
-    results.push(filename);
+    const stat = fs.lstatSync(filename);
+
+    if (stat.isDirectory()) {
+      main(filename);
+    }
+    else if (filename.indexOf('.html')>=0) {
+      results.push(filename);
+    }
+    
   }
   
   console.log(results)
   return results;
 }
 
-main();
+main(buildDir);
