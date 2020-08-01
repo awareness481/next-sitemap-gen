@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "Sitemap generator for Next.js projects",
   "main": "index.js",
+  "bin": {
+    "next-sm-gen": "index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
