@@ -17,17 +17,17 @@ function createFile(results) {
 
   writeStream.write(
     `<?xml version="1.0" encoding="UTF-8"?>
-     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     `
   )
   
   results.map((r) => {
     writeStream.write(
     `
-      <url>
-        <loc>http://domain.com/${r}</loc>
-      </url>
-    `);
+  <url>
+    <loc>http://domain.com/${r}</loc>
+  </url>
+`);
   })
 
   writeStream.write('</urlset>')
@@ -59,7 +59,7 @@ function main(builDdir) {
       else {
         let filePath = filename.substring(length - 1, filename.length);
         const arr = filePath.split('\\');
-        filePath = arr.join('/')
+        filePath = arr.join('/');
         results.push(filePath.substring(0, filePath.length - 5));
       }
     }
