@@ -1,13 +1,13 @@
 {
   "name": "next-sitemap-gen",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sitemap generator for Next.js projects",
   "main": "index.js",
   "bin": {
     "next-sm-gen": "index.js"
   },
   "scripts": {
-    "start": "#!/usr/bin/env node index.js"
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
