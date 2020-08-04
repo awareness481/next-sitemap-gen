@@ -1,6 +1,6 @@
 {
   "name": "@awareness481/next-sitemap-gen",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Sitemap generator for Next.js projects",
   "main": "index.js",
   "bin": {
