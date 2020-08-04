@@ -37,7 +37,7 @@ function createFile(results) {
   writeStream.write('</urlset>')
 
   writeStream.end();
-  console.log('file created!');
+  console.log('File created on the public folder!');
 }
 
 function main(builDdir) {
