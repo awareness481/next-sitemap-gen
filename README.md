@@ -16,5 +16,7 @@ scripts: {
 }
 ```
 
-and then in your terminal
-`$ npm run sitemap` 
+and then in your terminal    
+`$ npm run sitemap`  
+
+The file will be located on your project's public folder.
