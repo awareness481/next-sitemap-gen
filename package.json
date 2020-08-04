@@ -1,5 +1,5 @@
 {
-  "name": "@awareness481/next-sitemap-gen",
+  "name": "next-sitemap-gen",
   "version": "0.4.0",
   "description": "Sitemap generator for Next.js projects",
   "main": "index.js",
@@ -17,10 +17,10 @@
     "next.js",
     "react.js"
   ],
-  "author": "awareness481",
+  
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "bugs": {
     "url": "https://github.com/awareness481/next-sitemap-gen/issues"
