@@ -2,7 +2,6 @@
 
 const path = require('path');
 const fs = require('fs');
-const { dir } = require('console');
 
 const appDir = path.dirname(require.main.path[0]);
 const buildDir = path.dirname(appDir + '/.next/server/pages/.');
@@ -15,7 +14,10 @@ function hasBuildFolder() {
 }
 
 function createFile(results) {
-  const writeStream = fs.createWriteStream("sitemap.xml");
+  if (!fs.existsSync(appDir + '/public')) {
+    fs.mkdirSync(appDir + '/public/')
+  }
+  const writeStream = fs.createWriteStream("./public/sitemap.xml");
 
   writeStream.write(
     `<?xml version="1.0" encoding="UTF-8"?>
@@ -56,7 +58,7 @@ function main(builDdir) {
       main(filename);
     }
     else if (filename.indexOf('.html')>=0) {
-      if (dir.length === buildDir.length)
+      if (buildDir.length === length)
         results.push(path.basename(filename, '.html'));
       else {
         let filePath = filename.substring(length - 1, filename.length);
