@@ -12,7 +12,7 @@ You can use it as npm script
 
 ```js
 scripts: {
-    sitemap: 'next-sm-gen'
+    sitemap: 'next-sm-gen http://domain.com/'
 }
 ```
 

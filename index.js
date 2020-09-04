@@ -29,7 +29,7 @@ function createFile(results) {
     writeStream.write(
     `
   <url>
-    <loc>${process.env.SITE_URL}${r}</loc>
+    <loc>${process.argv[2]}${r}</loc>
   </url>
 `);
   })
